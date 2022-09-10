@@ -9,7 +9,8 @@ export default function ImageList() {
     return state.imageManagement.imageList.filter(
       (item) =>
         item.title?.includes(state.imageManagement.searchText) ||
-        item.description?.includes(state.imageManagement.searchText)
+        item.description?.includes(state.imageManagement.searchText) ||
+        item.tags?.includes(state.imageManagement.searchText)
     );
   });
   return imageList?.length ? (
